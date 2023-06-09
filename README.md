@@ -5,29 +5,31 @@ This is a React application that allows users to create tasks and add other user
 React
 Ruby
 Sinatra
+CSS
 
 # Components
 The react application has the following components:
 
-# App.js
+## App.js
 This is the main component of the application that contains the router and all the other components.
 
-# Main.js
+## Main.js
 This component displays the user's tasks and where the user can search for tasks.
 
-# TaskDetail.js
+## TaskDetail.js
 This component displays the details of a task including the description and users in the task.
 
-# SignUp.js
+## SignUp.js
 This component allows the user to create a new account.
 
-# Login.js
+## Login.js
 This component allows the user to log in to their account.
 
-# New.js
+## New.js
 This component is where the user creates a new task.
 
 # App Features
+The following are the features of my app:
 ## User Authentication
 A user can log in to their account. If they don't have an account then they can sign up to create an account
 
