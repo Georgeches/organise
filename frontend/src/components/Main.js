@@ -2,9 +2,9 @@ import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Task from "./Task";
 
-function Main({currentUser, setCurrentUser, tasks, setTasks, selectTask}){
+function Main({currentUser, setCurrentUser, tasks, setTasks, selectTask, setSearch, allTasks}){
     const nav = useNavigate()
-    const [search, setSearch] = useState("")
+
     function hanleLogout(e){
         e.preventDefault()
         setCurrentUser({id:0})
@@ -30,7 +30,7 @@ function Main({currentUser, setCurrentUser, tasks, setTasks, selectTask}){
         </div>
         <div className="main-body" style={{width: window.screen.width.toString() + 'px', textAlign: 'center'}}>
             <div className="body-header">
-                {tasks.length===1?<h2>You have {tasks.length} task</h2>:<h2>You have {tasks.length} tasks</h2>}
+                {tasks.length===1?<h2>You have {allTasks.length} task</h2>:<h2>You have {allTasks.length} tasks</h2>}
             </div>
             <div className="search-body">
                 <input type="text" id="search" onChange={(e)=>setSearch(e.target.value)} placeholder="Search"/>

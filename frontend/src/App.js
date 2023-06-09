@@ -17,6 +17,9 @@ function App() {
   const [currentUser, setCurrentUser] = useState({id:0})
   const [selectedTask, selectTask] = useState({})
   const [selectedTaskUsers, setSelectedTaskUsers] = useState([])
+  const [search, setSearch] = useState("")
+
+  const filteredTasks = tasks.filter(task=>task.description.search(search)>-1)
 
   useEffect(()=>{
     fetch("http://localhost:9292/users")
@@ -62,7 +65,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Login users={users} currentUser={currentUser} setCurrentUser={setCurrentUser}/>} />
-        <Route path="/home" element={<Main users={users} tasks={tasks} setCurrentUser={setCurrentUser} currentUser={currentUser} selectTask={selectTask} setTasks={setTasks}/>} />
+        <Route path="/home" element={<Main users={users} setSearch={setSearch} tasks={filteredTasks} allTasks={tasks} setCurrentUser={setCurrentUser} currentUser={currentUser} selectTask={selectTask} setTasks={setTasks}/>} />
         <Route path="/task" element={<Task users={users} tasks={tasks} currentUser={currentUser} selectTask={selectTask} selectedTask={selectedTask}/>} />
         <Route path="/login" element={<Login users={users} currentUser={currentUser} setCurrentUser={setCurrentUser}/>} />
         <Route path="/signup" element={<Signup users={users} setUsers={setUsers}/>} />
