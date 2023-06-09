@@ -28,16 +28,16 @@ This component allows the user to log in to their account.
 This component is where the user creates a new task.
 
 # App Features
-# User Authentication
+## User Authentication
 A user can log in to their account. If they don't have an account then they can sign up to create an account
 
-# Create and manage Tasks
+## Create and manage Tasks
 The logged in user can create tasks and add other users to the task. The admin can delete the task.
 
-# Search
+## Search
 Users can search for tasks.
 
-# Development
+## Development
 The app is built using React, Ruby and sinatra. Sinatra is used to create json data from the database and the data is fetched by react and displayed in the frontend.
 
 # Project Setup
