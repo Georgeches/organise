@@ -25,7 +25,7 @@ function Main({currentUser, setCurrentUser, tasks, setTasks, selectTask, setSear
         :
         <>
         <div className="header">
-            <h2>Welcome back {currentUser.name}</h2>
+            <h2>{currentUser.name}</h2>
             <h4 onClick={e=>hanleLogout(e)}><Link style={{color: 'rgb(183, 183, 183)', textDecoration: 'none'}} to = "/">Log out</Link></h4>
         </div>
         <div className="main-body" style={{width: window.screen.width.toString() + 'px', textAlign: 'center'}}>

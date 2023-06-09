@@ -122,9 +122,14 @@ form button{
 .detail-header{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   color: white;
   align-items: center;
   margin-bottom: 30px;
+}
+
+.detail-header h1{
+  margin-right: 50px;
 }
 
 select{
@@ -155,6 +160,7 @@ select{
 .task-content{
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .description h2, .users h2{
@@ -241,4 +247,10 @@ textarea{
 
 button{
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+  .vl{
+    display: none;
+  }
 }
