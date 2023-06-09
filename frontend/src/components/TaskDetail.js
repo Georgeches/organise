@@ -65,7 +65,7 @@ function TaskDetail({task, tasksusers, users, all_users, setSelectedTaskUsers, c
                 }
             </div>
             <div className="task-content">
-            <div className="description">
+            <div className="description" style={{width: "400px"}}>
                 <h2>Description</h2>
                 <p>{task.description}</p>
             </div>

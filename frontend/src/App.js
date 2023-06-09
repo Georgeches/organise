@@ -19,7 +19,7 @@ function App() {
   const [selectedTaskUsers, setSelectedTaskUsers] = useState([])
   const [search, setSearch] = useState("")
 
-  const filteredTasks = tasks.filter(task=>task.description.search(search)>-1)
+  const filteredTasks = tasks.filter(task=>task.description.toLowerCase().search(search.toLowerCase())>-1)
 
   useEffect(()=>{
     fetch("http://localhost:9292/users")
