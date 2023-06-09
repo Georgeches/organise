@@ -31,10 +31,11 @@ function Signup({users, setUsers}){
     return(
         <div className="signup">
             <form onSubmit={(e)=>handleSignup(e)}>
+                <h1>Sign up</h1>
                 <input type="text" name="username" placeholder="Enter your username" id="username" onChange={e=>setName(e.target.value)} required/>
                 <input type="password" name="password" placeholder="Enter your password" id="password" onChange={e=>setPassword(e.target.value)} required/>
                 <button type="submit">Create account</button>
-                <Link to="/login">Log in</Link>
+                <p>Already have an account?</p><Link to="/login">Log in</Link>
             </form>
         </div>
     )

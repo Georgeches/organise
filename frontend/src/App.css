@@ -10,7 +10,7 @@ body{
   text-align: center;
 }
 
-.login{
+.login, .signup{
   display: grid;
   place-content: center;
 }
