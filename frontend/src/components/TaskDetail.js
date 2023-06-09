@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Link,useNavigate } from "react-router-dom";
 
-function TaskDetail({task, tasksusers, users, all_users, setSelectedTaskUsers, currentUser}){
+function TaskDetail({task, tasksusers, users, all_users, setSelectedTaskUsers, currentUser, setTasks, tasks}){
     const [newUserId, setNewUserId] = useState("")
+    const nav = useNavigate()
 
     function addUser(e){
         e.preventDefault()
@@ -31,6 +33,19 @@ function TaskDetail({task, tasksusers, users, all_users, setSelectedTaskUsers, c
                 alert("The user is already added")
             }
         }
+    }
+
+    function deleteTask(e){
+        e.preventDefault()
+        fetch(`http://localhost:9292/deletetask/${task.id}`, {
+            method: "DELETE"
+        })
+        .then((response) => response.json)
+        .catch((error) => {
+            console.error("Error deleting task:", error);
+        });
+        nav('/home')
+        setTasks(tasks.filter(this_task=>this_task.id!==task.id))
     }
 
     return(
@@ -68,6 +83,14 @@ function TaskDetail({task, tasksusers, users, all_users, setSelectedTaskUsers, c
                 )}
             </div>
             </div>
+            {task.admin===currentUser.id?
+                <div className="remove-div">
+                    <button className="remove-task-btn" onClick={e=>deleteTask(e)}>Delete</button>
+                </div>
+                :
+                console.log("You are not the admin")
+            }
+            
         </div>
     )
 }

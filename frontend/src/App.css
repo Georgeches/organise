@@ -92,6 +92,11 @@ form button{
   border-radius: 10px;
 }
 
+.remove-div{
+  display: grid;
+  place-content: center;
+}
+
 .task-preview{
   height: 260px;
   width: 200px;
@@ -161,6 +166,8 @@ select{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  min-height: 300px;
+  margin-bottom: 50px;
 }
 
 .description h2, .users h2{
@@ -169,7 +176,7 @@ select{
 
 .vl {
   border-left: 4px solid #121212;
-  height: 500px;
+  height: 300px;
   position: absolute;
   left: 50%;
   margin-left: -3px;
@@ -204,6 +211,18 @@ textarea{
 .new-task-form{
   display: grid;
   place-content: center;
+}
+
+.remove-task-btn{
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #880707;
+  color: rgb(179, 179, 179);
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin-left: 10px;
 }
 
 .App {

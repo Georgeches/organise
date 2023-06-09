@@ -1,3 +1,5 @@
+require 'json'
+
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
 
@@ -72,6 +74,15 @@ class ApplicationController < Sinatra::Base
     
     new_task_user = TasksUser.create(user: User.find(taskuser_user), task: Task.find(taskuser_task))
     new_task_user.to_json
+  end
+
+  delete '/deletetask/:id' do
+    id = params[:id].to_i
+    task_delete = Task.find(id)
+
+    task_delete.destroy
+    
+    {message: "deleted"}.to_json
   end
 
 end

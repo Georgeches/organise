@@ -70,7 +70,7 @@ function App() {
         <Route path="/login" element={<Login users={users} currentUser={currentUser} setCurrentUser={setCurrentUser}/>} />
         <Route path="/signup" element={<Signup users={users} setUsers={setUsers}/>} />
         <Route path="/newtask" element={<New currentUser={currentUser} setTasks={setTasks} tasks={tasks}/>} />
-        <Route path="/taskdetail" element={<TaskDetail tasksusers={tasksusers} task={selectedTask} all_users = {users} setSelectedTaskUsers={setSelectedTaskUsers} users={selectedTaskUsers} currentUser={currentUser}/>} />
+        <Route path="/taskdetail" element={<TaskDetail tasks={tasks} setTasks={setTasks} tasksusers={tasksusers} task={selectedTask} all_users = {users} setSelectedTaskUsers={setSelectedTaskUsers} users={selectedTaskUsers} currentUser={currentUser}/>} />
       </Routes>
     </BrowserRouter>
   );

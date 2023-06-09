@@ -1,5 +1,5 @@
 puts "🌱 Seeding spices..."
 
-User.destroy_all
+User.last.destroy
 
 puts "✅ Done seeding!"
