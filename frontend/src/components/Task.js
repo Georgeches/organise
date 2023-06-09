@@ -8,12 +8,12 @@ function Task({task, selectTask, currentUser}){
         nav('/taskdetail')
     }
     return(
-        <>
-        <div className="task" onClick={e=>openTask(e)}>
+        <div className="task">
+        <div className="task-preview" onClick={e=>openTask(e)}>
             <p>{task.description}</p>
         </div>
         <p onClick={e=>openTask(e)}>{task.name}</p>
-        </>
+        </div>
     )
 }
 

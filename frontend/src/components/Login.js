@@ -22,10 +22,11 @@ function Login({setCurrentUser, currentUser, users}){
     return(
         <div className="login">
             <form onSubmit={(e)=>handleLogin(e)}>
+                <h1>Log in</h1>
                 <input type="text" name="username" placeholder="Enter your username" id="username" onChange={e=>setName(e.target.value)} required/>
                 <input type="password" name="password" placeholder="Enter your password" id="password" onChange={e=>setPassword(e.target.value)} required/>
                 <button type="submit">Log in</button>
-                <Link to="/signup">Sign up</Link>
+                <p>Already have an account?</p><Link to="/signup">Sign up</Link>
             </form>
         </div>
     )

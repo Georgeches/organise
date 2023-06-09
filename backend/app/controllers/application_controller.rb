@@ -54,7 +54,7 @@ class ApplicationController < Sinatra::Base
   end
 
   delete '/removeuser/:user_id/:task_id' do
-    taskuser = TasksUser.find_by(user_id: params[:user_id], task_id: params[:task_id])
+    taskuser = TasksUser.find_by(user_id: params[:user_id])
   
     if taskuser
       taskuser.destroy

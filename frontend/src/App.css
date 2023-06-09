@@ -1,3 +1,205 @@
+body{
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+.login-first{
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.login{
+  display: grid;
+  place-content: center;
+}
+
+form{
+  margin-top: 100px;
+  min-height: 400px;
+  width: 500px;
+  box-shadow: 1px 1px 10px 1px rgb(20, 20, 20);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+form input{
+  height: 50px;
+  width: 400px;
+  background-color: #121212;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  color: rgb(89, 89, 89);
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+form button{
+  height: 50px;
+  width: 410px;
+  background-color: #121212;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-body{
+  display: grid;
+  place-content: center;
+}
+
+.body-header{
+  margin-top: 30px;
+}
+
+.search-body input{
+  height: 45px;
+  width: 400px;
+  background-color: #121212;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  color: rgb(89, 89, 89);
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.tasks-body{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task{
+  height: 300px;
+  width: 200px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.task-preview{
+  height: 260px;
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #121212;
+  padding-top: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.new-task-button{
+  height: 55px;
+  width: 55px;
+  border-radius: 100%;
+  background-color: #880707;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.detail-header{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+select{
+  height: 40px;
+  width: 150px;
+  background-color: #121212;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  color: rgb(125, 125, 125);
+  font-size: 15px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.add-user-btn{
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #424242;
+  color: rgb(179, 179, 179);
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.task-content{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.description h2, .users h2{
+  margin-bottom: 40px;
+}
+
+.vl {
+  border-left: 4px solid #121212;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.admin{
+  display: flex;
+}
+
+.admin p:first-child{
+  margin-right: 60px
+}
+
+.user-name{
+  margin-bottom: 35px;
+}
+
+textarea{
+  height: 300px;
+  width: 400px;
+  background-color: #121212;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  color: rgb(89, 89, 89);
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.new-task-form{
+  display: grid;
+  place-content: center;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +237,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button{
+  cursor: pointer;
 }

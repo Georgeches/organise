@@ -31,8 +31,8 @@ function New({currentUser, tasks, setTasks}){
 
     return(
         <div className="new-task-form">
-            <h2>New Task</h2>
             <form onSubmit={e=>addNewTask(e)}>
+                <h2>New Task</h2>
                 <input type="text" placeholder="Enter name of task" onChange={e=>setTaskName(e.target.value)} id="task-name"/>
                 <textarea placeholder="Enter task description" onChange={e=>setDescription(e.target.value)}></textarea>
                 <button type="submit">Add</button>

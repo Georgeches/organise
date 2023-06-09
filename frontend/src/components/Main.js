@@ -18,27 +18,27 @@ function Main({currentUser, setCurrentUser, tasks, setTasks, selectTask}){
         <>
         {currentUser.id === 0
         ?
-        <>
+        <div className="login-first">
         <h1>Please Log in first</h1>
         <Link to='/'>Log in</Link>
-        </>
+        </div>
         :
         <>
         <div className="header">
             <h2>Welcome back {currentUser.name}</h2>
-            <h4 onClick={e=>hanleLogout(e)}><Link to = "/">Log out</Link></h4>
+            <h4 onClick={e=>hanleLogout(e)}><Link style={{color: 'rgb(183, 183, 183)', textDecoration: 'none'}} to = "/">Log out</Link></h4>
         </div>
-        <div className="main-body">
+        <div className="main-body" style={{width: window.screen.width.toString() + 'px', textAlign: 'center'}}>
             <div className="body-header">
-                {tasks.length===1?<h4>You have {tasks.length} task</h4>:<h4>You have {tasks.length} tasks</h4>}
+                {tasks.length===1?<h2>You have {tasks.length} task</h2>:<h2>You have {tasks.length} tasks</h2>}
             </div>
             <div className="search-body">
                 <input type="text" id="search" onChange={(e)=>setSearch(e.target.value)} placeholder="Search"/>
             </div>
-            <div className="tasks-body">
+            <div className="tasks-body" style={{width: window.screen.width*0.8.toString() + 'px'}}>
                 {tasks.map(thisTask=><Task task={thisTask} selectTask={selectTask} currentUser={currentUser}/>)}
-                <button onClick={e=>{addTask(e)}}>add</button>
             </div>
+            <button onClick={e=>{addTask(e)}} className="new-task-button"><i class="las la-plus"></i></button>
         </div>
         </>
         }
